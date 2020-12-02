@@ -19,7 +19,7 @@ def index():
 		img = userdetails['file']
 		summary = userdetails['textarea']
 		cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO application(name,img,summary) VALUES(%s,%s,%s)"(name,image,summary))
+        cur.execute("INSERT INTO application(name,img,summ) VALUES(%s,%s,%s)(name,image,summary)")
         mysql.connection.commit()
         cur.close()
         return redirect('/users')
